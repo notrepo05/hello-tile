@@ -1,16 +1,16 @@
 ---
 slug: crhntr-hello
+# something
 release_sources:
   - type: artifactory
     id: artifactory
-    artifactory_host: $(variable "artifactory_url")
+    artifactory_host: http://admin:password@localhost:8082/artifactory
     repo: example-repo-local
     publishable: true # if this repo contains releases that are suitable to ship to customers
-    username: $(variable "artifactory_username")
-    password: $(variable "artifactory_password")
+    username: admin
+    password: password
     path_template: compiled-releases/{{.Name}}/{{.Name}}-{{.Version}}-{{.StemcellOS}}-{{.StemcellVersion}}.tgz
 releases:
-  - name: bpm
   - name: hello-release
 stemcell_criteria:
     os: ubuntu-jammy
