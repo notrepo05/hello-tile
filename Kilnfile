@@ -12,6 +12,7 @@ release_sources:
     path_template: compiled-releases/{{.Name}}/{{.Name}}-{{.Version}}-{{.StemcellOS}}-{{.StemcellVersion}}.tgz
 releases:
   - name: hello-release
+  - name: bpm
 stemcell_criteria:
     os: ubuntu-jammy
     version: "*"
