@@ -4,11 +4,11 @@ slug: crhntr-hello
 release_sources:
   - type: artifactory
     id: artifactory
-    artifactory_host: http://admin:password@localhost:8082/artifactory
+    artifactory_host: http://$(variable "artifactory_username"):$(variable "artifactory_password")@$(variable "artifactory_host")/artifactory
     repo: example-repo-local
     publishable: true # if this repo contains releases that are suitable to ship to customers
-    username: admin
-    password: password
+    username: $(variable "artifactory_username")
+    password: $(variable "artifactory_password")
     path_template: compiled-releases/{{.Name}}/{{.Name}}-{{.Version}}-{{.StemcellOS}}-{{.StemcellVersion}}.tgz
 releases:
   - name: hello-release
