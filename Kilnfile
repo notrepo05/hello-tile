@@ -4,7 +4,7 @@ slug: crhntr-hello
 release_sources:
   - type: artifactory
     id: artifactory
-    artifactory_host: http://$(variable "artifactory_username"):$(variable "artifactory_password")@$(variable "artifactory_host")/artifactory
+    artifactory_host: $(variable "artifactory_host")
     repo: $(variable "artifactory_repo")
     publishable: true # if this repo contains releases that are suitable to ship to customers
     username: $(variable "artifactory_username")
